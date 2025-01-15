@@ -1,0 +1,5 @@
+以 ALU 为例，结合 Xfuzzer 的步骤如下：
+
+1、通过 verilator 将 verilog 代码编译为 C++ 代码：
+
+

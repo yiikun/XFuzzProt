@@ -55,7 +55,7 @@ fn sim_run(workload: &String) -> i32 {
     let mut p_argv: Vec<_> = sim_args.iter().map(|arg| arg.as_ptr()).collect();
     p_argv.push(std::ptr::null());
 
-    // send simulation arguments to sim_main and get the return code
+    // @makun: send simulation arguments to sim_main and get the return code
     let ret = unsafe { sim_main(sim_args.len() as i32, p_argv.as_ptr()) };
     unsafe { update_stats(cover_as_mut_ptr()) }
     cover_accumulate();
